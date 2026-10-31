@@ -19,7 +19,7 @@ PhenoRewire v0.1.1 and v0.2.0; see `analysis/validation/`). It adds:
 | Threshold-free | v0.2.0: connectivity-based selection at >= 14 samples per state | **differential connectivity (DC)** and **pathway cross-talk coherence** on the whole metabolome, usable at small n |
 | More than two states | pairwise only | **three-state trajectory** (healthy -> disease -> treatment) with a regression-to-the-mean-corrected rescue null |
 | Technical covariates | - | additive covariate (block/batch) adjustment |
-| Several tissues | - | **paired inter-organ coupling** and bipartite rewiring |
+| Several tissues | - | **paired dual-compartment coupling** and bipartite rewiring |
 
 ## Installation
 
