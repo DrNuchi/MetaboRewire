@@ -152,7 +152,7 @@ Any features x samples matrix works; annotation is only used to label and group 
 
 ## Citation
 
-If you use MetaboRewire, please cite [your paper / the Zenodo DOI] and PhenoRewire
+If you use MetaboRewire, please cite doi:10.5281/zenodo.23835788 and PhenoRewire
 (Della Vedova *et al.*, bioRxiv 2026, doi:10.64898/2026.08.29.748013).
 GitHub's "Cite this repository" button (from `CITATION.cff`) gives ready-made formats.
 
