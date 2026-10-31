@@ -1,4 +1,4 @@
-# MetaboRewire
+# MetaboRewire <img src="MetaboRewire/man/figures/logo.png" align="right" height="139" alt="MetaboRewire logo" />
 
 [![R-CMD-check](https://github.com/DrNuchi/MetaboRewire/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DrNuchi/MetaboRewire/actions/workflows/R-CMD-check.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
