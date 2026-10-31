@@ -1,5 +1,3 @@
-# Citation metadata - GitHub shows a "Cite this repository" button from this file.
-# Fill in the [ ] fields. After the first Zenodo release, add the DOI it gives you.
 cff-version: 1.2.0
 message: "If you use MetaboRewire, please cite it as below, together with PhenoRewire (Della Vedova et al., 2026)."
 title: "MetaboRewire: permutation-calibrated metabolite co-variation rewiring across disease and treatment states"
@@ -9,11 +7,11 @@ authors:
     given-names: "Ovinuchi"
     orcid: "https://orcid.org/0000-0003-2153-7205"
     affiliation: "Poznan University of Life Sciences"
-version: 0.1.0
-date-released: "2026-11-01"
+version: "0.1.0"
+date-released: "2026-10-31"
 license: MIT
 repository-code: "https://github.com/DrNuchi/MetaboRewire"
-doi: 10.5281/zenodo.23835788
+doi: "10.5281/zenodo.23835788"
 keywords:
   - metabolomics
   - differential network analysis
