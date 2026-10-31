@@ -2,7 +2,7 @@
 
 [![R-CMD-check](https://github.com/DrNuchi/MetaboRewire/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DrNuchi/MetaboRewire/actions/workflows/R-CMD-check.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-<!-- After the first Zenodo release, add its DOI badge here -->
+[![DOI](https://zenodo.org/badge/1440754539.svg)](https://doi.org/10.5281/zenodo.23835788)
 
 **Permutation-calibrated metabolite co-variation rewiring across multiple biological states (R).**
 
