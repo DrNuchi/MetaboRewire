@@ -1,0 +1,24 @@
+Package: MetaboRewire
+Type: Package
+Title: Permutation-Calibrated Metabolite Co-Variation Rewiring Across Multiple Biological States
+Version: 0.1.0
+Authors@R: person("Ovinuchi Ejiohuo", "", email = "ovinuchi.ejiohuo@gmail.com", role = c("aut", "cre"))
+Description: An R implementation and extension of the PhenoRewire framework
+    (Della Vedova et al., bioRxiv 2026) for quantifying how metabolite co-variation
+    networks are rewired between biological states. In addition to a faithful port of
+    PhenoRewire (permutation-based feature selection, state-specific Spearman networks
+    with bounded adaptive thresholds, edge-level rewiring classification and node
+    triage), MetaboRewire adds (i) exact label-permutation inference for global and
+    node-level rewiring under within-state standardisation, (ii) leave-one-out edge
+    support, (iii) three-state trajectory analysis (reference -> perturbation ->
+    intervention) with a network rescue index, (iv) pathway cross-talk enrichment and
+    (v) paired cross-compartment coupling analysis.
+License: MIT + file LICENSE
+URL: https://github.com/DrNuchi/MetaboRewire
+BugReports: https://github.com/DrNuchi/MetaboRewire/issues
+Encoding: UTF-8
+Depends: R (>= 4.1)
+Imports: igraph, matrixStats, stats, utils, jsonlite
+Suggests: yaml, limma, vegan, ggplot2, patchwork, ggrepel, testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.3.1

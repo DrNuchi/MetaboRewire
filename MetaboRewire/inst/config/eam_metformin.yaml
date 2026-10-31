@@ -1,0 +1,58 @@
+# MetaboRewire configuration - EAM / metformin plasma + heart study
+# Paths: edit data_dir to the folder holding the Metabolon csv exports.
+data_dir: "/Users/ovii/Desktop/metabolome/MetaboRewire"
+out_dir: "/Users/ovii/Desktop/metabolome/MetaboRewire/MetaboRewire_results"
+
+tissues:
+  plasma: ""        # file suffix: batchnorm.csv, batchnormimputed.csv, metadata.csv, chemicalannotation.csv
+  heart: "H"        # batchnormH.csv, ...
+
+group_map:          # Metabolon GROUP_NAME -> state label (order = trajectory order)
+  "day 0": "Healthy"
+  "day 40": "EAM"
+  "day 40 Metformin": "EAM_Met"
+
+states: ["Healthy", "EAM", "EAM_Met"]      # reference -> perturbation -> intervention
+comparisons:
+  - ["Healthy", "EAM"]       # disease rewiring
+  - ["EAM", "EAM_Met"]       # treatment rewiring
+  - ["Healthy", "EAM_Met"]   # residual rewiring after treatment
+
+preprocess:
+  min_presence_group: 0.5    # keep features detected in >= 50% of samples of at least one state
+  transform: "log2"          # Metabolon values are already median-scaled per metabolite
+  norm: "none"
+  covariate: "block"         # technical block (two contiguous Metabolon sample runs); set to null to disable
+  adjust_covariate: true
+
+phenorewire:                 # PhenoRewire phenotype-mode parameters (as in Della Vedova et al.)
+  selection_method: "rank_perm"   # "rank_perm" (PhenoRewire) or "limma" (sensitivity analysis)
+  n_perm_selection: "exact"       # exact enumeration of all choose(12, 6) = 924 labelings
+  selection_fdr: 0.05
+  adaptive_selection: true
+  selection_min_features: 5
+  selection_fdr_ceiling: 0.20
+  min_presence_run: 0.35
+  min_state_presence: 0.8         # MetaboRewire: network nodes detected in >= 80% of each state
+  network:
+    abs_r: 0.70
+    fdr: 0.05
+    adaptive: true
+    min_edges: 3
+    max_density: 0.25
+    abs_r_floor: 0.50
+    fdr_ceiling: 0.20
+    sign_switch_min_r: 0.5
+  n_perm_rewiring: "exact"
+  seed: 42
+
+whole_metabolome:
+  class_column: "super_pathway"
+  n_perm: "exact"
+
+three_state:
+  n_perm_selection: 5000
+  n_perm: "exact"
+
+coupling:
+  n_perm: 2000
